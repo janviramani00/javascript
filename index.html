@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="utf-8">
+
+</head>
+
+<body style="text-align: center;">
+
+
+
+        <h3 id="input">Input Array Elements</h3>
+        <form class="" action="" method="post">
+                <input type="text" name="number1" value="" /><br>
+                <input type="text" name="number2" value="" /><br>
+
+                <label for="calc">Choose a operation:</label>
+
+                <select name="operator">
+                        <option value="sum" name="sum">sum</option>
+                        <option value="mul" name="mul">mul</option>
+                        <option value="div" name="div">div</option>
+                        <option value="sub" name="sub">sub</option>
+                </select>
+
+
+                <button type="button" name="button" onclick="Add()">
+                        Submit
+                </button>
+        </form>
+        <br>
+
+        <p id="output"></p>
+
+        <script type="text/javascript">
+
+                function Add() {
+                        var n1 = document.getElementsByName('number1')[0].value;
+                        var n2 = document.getElementsByName('number2')[0].value;
+
+                        console.log(n2);
+                        console.log(n1);
+
+
+                        var operator = document.getElementsByName('operator')[0].value;
+                        console.log(operator);
+                        let result;
+
+                        switch (operator) {
+                                case 'sum':
+                                        result = +n1 + +n2;
+                                        console.log(`${n1} + ${n2} = ${result}`);
+                                        break;
+
+                                case 'sub':
+                                        result = n1 - n2;
+                                        console.log(`${n1} - ${n2} = ${result}`);
+                                        break;
+
+                                case 'mul':
+                                        result = n1 * n2;
+                                        console.log(`${n1} * ${n2} = ${result}`);
+                                        break;
+
+                                case 'div':
+                                        result = n1 / n2;
+                                        console.log(`${n1} / ${n2} = ${result}`);
+                                        break;
+
+
+                        }
+
+
+
+                }
+        </script>
+
+</body>
+
+</html>
