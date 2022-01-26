@@ -132,19 +132,6 @@ function printNumbers(from, to) {
 printNumbers(5, 10);
 
 
-//promises and error handling
-
-
-new Promise((resolve, reject) => {
-
-        throw new Error("error!");
-
-}).catch(function (error) {
-
-        alert(" continue ");
-
-}).then(() => alert("Next"));
-
 
 //classes
 
@@ -155,7 +142,7 @@ class User {
         }
 
         sayHi() {
-                alert(this.name);
+                console.log(this.name);
         }
 
 }
@@ -163,3 +150,7 @@ class User {
 
 let user = new User("Janvi");
 user.sayHi();
+
+
+
+
